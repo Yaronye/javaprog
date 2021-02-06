@@ -39,26 +39,32 @@ public class dekompression {
         return tempString;
     }
 
-
-    public static void main(String[] args){
+    public static void dekompress(){
         String input = scan.next();
         String[] inputList = input.split("");
-        
+        int tempint = 0;
+    
         for(int i = 0; i < inputList.length; i++){
-            int tempint = 0;
+            String tempstring = "";
             if(stringIsInt(inputList[i])){              //Check if int
                 tempint = whileInt(inputList, i);
             }
             else{
                 if(inputList[i].equals("(")){
-                    
-                    }
+                    dekompress();
                 }
-            }
-            
+                else if(inputList[i].equals(")")){
+                    break;
+                }
+                else{
+                    tempstring += inputList[i];
+                }
+            }   
         }
 
     }
 
-    
+    public static void main(String[] args){
+ 
+    }    
 }
