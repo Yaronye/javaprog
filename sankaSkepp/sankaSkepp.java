@@ -1,5 +1,4 @@
 package sankaSkepp;
-
 import java.util.Scanner;
 
 
@@ -16,8 +15,6 @@ public class sankaSkepp
         board = new String[r][n];
         visitedMatrix  = new String[r][n];
 
-        
-
         valuedMatrix(r, n);
         for(int i = 0; i < r; i++)
         {
@@ -33,17 +30,13 @@ public class sankaSkepp
                             if(board[i][j + 1].equals("O"))
                             {
                                 //sideways ship
-                                //System.out.println(" horizontal ship found");
                                 horizontalShip(r, n, i, j);
                                 continue;
                             }
                         }
                         //downward ship
-                        //System.out.println(" vertical ship found");
                         verticalShip(r, n, i, j);
-
                     }
-                    
                 }
             }
         }
@@ -55,23 +48,22 @@ public class sankaSkepp
         for(int i = 0; i < r; i++)
         {
             String line = scan.next();
-            //System.out.println(line);
-
             String[] lineChars = line.split("");
             
             
             for(int j = 0; j < n; j++)
             {
                 board[i][j] = lineChars[j];
-                //System.out.println(board[i][j]);
             }
         }
     }
 
     public static void horizontalShip(int r, int n, int i, int j)
     {
-        while(j < n){
-            if(board[i][j].equals("O")){
+        while(j < n)
+        {
+            if(board[i][j].equals("O"))
+            {
                 visitedMatrix[i][j] = "ship";
                 j += 1;
             }
@@ -84,12 +76,15 @@ public class sankaSkepp
 
     public static void verticalShip(int r, int n, int i, int j)
     {
-        while(i < r){
-            if(board[i][j].equals("O")){
+        while(i < r)
+        {
+            if(board[i][j].equals("O"))
+            {
                 visitedMatrix[i][j] = "ship";
                 i += 1;
             }
-            else{
+            else
+            {
                 break;
             }
         }
