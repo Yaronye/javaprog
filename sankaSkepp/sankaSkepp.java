@@ -2,7 +2,7 @@ package sankaSkepp;
 import java.util.Scanner;
 
 
-public class sankaSkepp 
+public class SankaSkepp 
 {
     static Scanner scan = new Scanner(System.in);     //DEBUG
     static int shipCount = 0;

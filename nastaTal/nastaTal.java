@@ -1,7 +1,7 @@
 package nastaTal;
 import java.util.Scanner;             //DEBUG
 
-public class nastaTal {
+public class NastaTal {
     static Scanner scan = new Scanner(System.in);     //DEBUG
 
     public static int formula(int a, int b, int c){

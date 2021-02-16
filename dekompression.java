@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class dekompression{
+public class Dekompression{
     static Scanner scan = new Scanner(System.in);
     static String input = scan.next();
     static String[] charList = input.split("");

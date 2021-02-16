@@ -1,6 +1,6 @@
 //import java.util.Scanner;
 
-public class laggIhopOrd{
+public class LaggIhopOrd{
     //static Scanner scan = new Scanner(System.in);     //DEBUG
 
     public static void main(String[] args) {
